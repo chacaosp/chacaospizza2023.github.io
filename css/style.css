@@ -516,16 +516,53 @@ header .navbar a:hover {
   top: -120%;
 }
 
+/*-------------------------------------------------------------------------------------------------------*/
+/* Estilo para la clase "submenu" y su dropdown */
+.navbar .submenu {
+  position: relative; /* Necesario para posicionar el dropdown */
+  display: inline-block;
+}
 
+.navbar .submenu .dropdown {
+  position: absolute;
+  top: 100%; /* Muestra el submenú justo debajo del enlace "Nuestro Menú" */
+  left: 0;
+  background: #fff; /* Color de fondo del submenú */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  display: none; /* Oculta el submenú por defecto */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px; /* Ancho mínimo del submenú */
+  z-index: 100; /* Asegura que el submenú se superponga sobre otros elementos */
+}
 
+.navbar .submenu .dropdown li {
+  padding: 1rem;
+  text-align: left;
+}
 
+.navbar .submenu .dropdown li a {
+  display: block;
+  color: #666;
+  font-size: 1.7rem; /* Ajusta el tamaño de la fuente */
+  padding: 1rem;
+  text-decoration: none;
+  background: #fff; /* Fondo del submenú */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borde entre los elementos */
+}
 
+.navbar .submenu .dropdown li a:hover {
+  background-color: var(--red); /* Cambia el fondo al pasar el mouse */
+  color: #fff; /* Cambia el color del texto en hover */
+}
 
+/* Mostrar el submenú al hacer hover en el padre ".submenu" */
+.navbar .submenu:hover .dropdown {
+  display: block; /* Muestra el submenú cuando el mouse está encima */
+}
 
-
-
-
-
+/*-----------------------------------------------------------------------------------------------------*/
 
 
 
@@ -575,7 +612,16 @@ header .navbar a:hover {
     border-left: .5rem solid var(--red);
     background: #fff;
   }
+  /*-------------------------------------------------------------------------------------------------------*/
+  .navbar .submenu .dropdown {
+    position: static; /* Asegura que el submenú esté dentro del flujo en móviles */
+    display: none; /* Ocultar por defecto */
+  }
 
+  .navbar .submenu.active .dropdown {
+    display: block; /* Mostrar al hacer clic en móviles */
+  }
+  /*-------------------------------------------------------------------------------------------------------*/
 }
 
 @media(max-width:450px) {
