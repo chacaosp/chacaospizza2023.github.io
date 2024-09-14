@@ -236,6 +236,9 @@ header .navbar a:hover{
   text-align: center;
   flex:1 1 30rem;
   position: relative;
+
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .popular .box-container .box img{
