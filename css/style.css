@@ -533,7 +533,7 @@ header .navbar a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  min-width: 180px; /* Ancho mínimo del submenú */
+  min-width: 300px; /* Ancho mínimo del submenú */
   z-index: 100; /* Asegura que el submenú se superponga sobre otros elementos */
 }
 
